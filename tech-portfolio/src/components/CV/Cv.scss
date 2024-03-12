@@ -1,0 +1,57 @@
+@use "../../styles/variables" as *;
+
+.cv {
+  margin: 50px 20px 50px 20px;
+  color: $color-text-primary;
+  font-family: $body-font;
+
+  &__title {
+    font-size: 40px;
+    font-family: $title-font;
+  }
+
+  &__intro {
+    font-family: $body-font;
+    padding-bottom: 10px;
+  }
+
+  &__subtitle {
+    color: $color-text-secondary;
+    font-size: 25px;
+    font-family: $title-font;
+  }
+
+  &__collapsible {
+    transition-property: height;
+    overflow: hidden;
+    background-color: $color-background-secondary;
+
+    &--info {
+      font-size: 15px;
+      margin: 7.5px;
+    }
+
+    &--date {
+      color: $color-text-secondary;
+    }
+  }
+
+  &__button {
+    background-color: transparent;
+    color: $color-text-primary;
+    border: none;
+    text-align: left;
+    margin: 10px;
+    font-size: 15px;
+  }
+
+  &__list {
+    color: $color-text-secondary;
+  }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .cv {
+    margin: 50px;
+  }
+}

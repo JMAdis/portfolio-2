@@ -1,0 +1,111 @@
+@use "../../styles/variables" as *;
+
+.about {
+  margin: 20px;
+  margin-bottom: 20vh;
+  color: $color-text-primary;
+  padding: 1rem;
+
+  &__image {
+    display: none;
+  }
+
+  &__title {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 10vh;
+    font-size: 35px;
+    font-family: $title-font;
+    &--highlight {
+      color: $color-text-secondary;
+    }
+  }
+
+  &__text {
+    &--body {
+      font-family: $body-font;
+      padding-bottom: 15vh;
+    }
+  }
+
+  &__cta {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    &--scroll {
+      text-decoration: none;
+      font-family: $body-font;
+      color: $color-text-primary;
+    }
+    &--arrow {
+      max-height: 20px;
+      max-width: 20px;
+      margin-left: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .about {
+    border: solid 70px $color-background-primary;
+    background-color: $color-background-secondary;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    &__image {
+      display: unset;
+    }
+    &__imagecontainer {
+      display: flex;
+      justify-content: center;
+      height: 300px;
+    }
+    &__title {
+      padding-bottom: 30px;
+    }
+    &__text {
+      &--body {
+        font-family: $body-font;
+        font-size: 18px;
+        padding-bottom: 65px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .about {
+    border: solid 100px $color-background-primary;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    &__title,
+    &__text {
+      padding-bottom: 30px;
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+    &__imagecontainer {
+      grid-column: 2 / 3;
+      grid-row: 1 / 4;
+    }
+
+    &__cta {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      &--scroll {
+        text-decoration: none;
+        margin-right: 20px;
+        color: $color-text-primary;
+      }
+      &--arrow {
+        max-height: 20px;
+        max-width: 20px;
+      }
+    }
+  }
+}
