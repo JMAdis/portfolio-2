@@ -20,7 +20,7 @@ const Nav = () => {
           <a href="#about">About</a>
           <a href="#portfolio">Portfolio</a>
           <a
-            href="mailto:jessicaadis7@gmail.com"
+            href="mailto:jessicaadis7@gmail.com?subject=Hey we'd love to work with you!"
             rel="noopener noreferrer"
             className="navigation__right--cta"
           >
