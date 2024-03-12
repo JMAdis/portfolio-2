@@ -1,0 +1,51 @@
+@use "../../styles/variables" as *;
+
+.projects-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 10px;
+  border: solid grey 1px;
+  margin: 1rem;
+  align-items: center;
+
+  &__image {
+    margin: auto;
+    height: 7rem;
+  }
+
+  &__title {
+    color: $color-text-primary;
+    font-family: $body-font;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    font-family: $body-font;
+  }
+  &__skills-cat {
+    background-color: darkgray;
+    color: $color-text-primary;
+    font-size: 10px;
+    padding: 5px 10px 5px 10px;
+    margin-right: 10px;
+    border-radius: 5%;
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: $tablet-breakpoint) { 
+  .projects-group{
+      padding: 10px;
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) { 
+  .projects-group{
+      padding: 15px;
+  }
+}

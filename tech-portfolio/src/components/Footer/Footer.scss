@@ -1,16 +1,15 @@
 @use "../../styles/variables" as *;
 
 footer {
-    background-color: $color-text-secondary;
-    font-size: 10px;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px 10px 20px;
-    font-family: $body-font;
-    font-weight: bold;
+  background-color: $color-text-secondary;
+  font-size: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px 10px 20px;
+  font-family: $body-font;
+  font-weight: bold;
 
-    &__right{
-        font-family: $title-font;
-    }
-
+  &__right {
+    font-family: $title-font;
+  }
 }

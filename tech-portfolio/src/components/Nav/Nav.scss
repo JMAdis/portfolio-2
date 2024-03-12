@@ -1,0 +1,80 @@
+@use "../../styles/variables" as *;
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: $color-background-primary;
+    color: $color-text-secondary;
+  
+    &__left {
+      color: $color-text-secondary;
+      text-decoration: none;
+      font-size: 30px;
+    }
+    &__dropbtn {
+    background-color: $color-background-primary;
+      color: black;
+      padding: 16px;
+      border: 0;
+      margin-left: auto;
+      &--icon{
+        max-height: 30px;
+        max-width: 25px;
+      }
+    }
+    &__right {
+      position: relative;
+      display: inline-block;
+  
+      &--content {
+        display: none;
+        position: absolute;
+        background-color: $color-background-secondary;
+        z-index: 1;
+  
+        & a {
+          color: $color-text-secondary;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+      }
+    }
+    .navigation__right:hover .navigation__right--content {
+      display: block;
+    }
+  }
+  
+  @media screen and (min-width: $tablet-breakpoint) {
+    .navigation {
+      padding: 70px;
+      flex-direction: row;
+      align-items: center;
+  
+      &__dropbtn {
+        display: none;
+      }
+  
+      &__right {
+        display: flex;
+        color: $color-text-primary;
+  
+        &--content {
+          position: static;
+          display: block;
+          z-index: 0;
+          background-color: $color-background-primary;
+          color: $color-text-primary;
+        }
+        &--content a {
+          border-bottom: 1px solid;
+          display: inline-block;
+        }
+      }
+    }
+    .navigation__right:hover .navigation__right--content {
+      display: flex;
+    }
+  }
